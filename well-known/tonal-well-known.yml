@@ -1,0 +1,36 @@
+generated: '2026-07-21'
+method: searched
+host: https://tonal.com
+documents:
+- path: /.well-known/security.txt
+  status: 404
+- path: /security.txt
+  status: 404
+- path: /.well-known/openid-configuration
+  status: 200
+  file: tonal-openid-configuration.json
+  note: Shopify Customer Account API OIDC discovery (issuer shopify.com/authentication/87937679642);
+    scopes include customer-account-api:full and customer-account-mcp-api:full.
+- path: /.well-known/oauth-authorization-server
+  status: 200
+  file: tonal-oauth-authorization-server.json
+  note: RFC 8414 authorization-server metadata, same Shopify customer-account issuer.
+- path: /.well-known/ucp
+  status: 200
+  file: tonal-ucp.json
+  note: Universal Commerce Protocol merchant profile (versions 2026-04-08 / 2026-01-23) —
+    shopping service over MCP transport, checkout/cart/fulfillment/discount/order/catalog
+    capabilities, Google Pay / Shopify card / Shop Pay payment handlers.
+- path: /.well-known/api-catalog
+  status: 404
+- path: /.well-known/ai-plugin.json
+  status: 404
+- path: /llms.txt
+  status: 200
+  file: ../llms/tonal-llms.txt
+  note: Storefront agent instructions (mirrors /agents.md); documents the UCP discovery
+    endpoint and the MCP endpoint at /api/ucp/mcp.
+- path: /agents.md
+  status: 200
+  note: Canonical agent-facing description of the store; /llms.txt mirrors it (not saved
+    separately).

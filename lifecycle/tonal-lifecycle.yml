@@ -1,0 +1,18 @@
+generated: '2026-07-21'
+method: searched
+source: https://status.tonal.com
+status_page: https://status.tonal.com
+status_page_platform: Atlassian Statuspage
+status_components:
+- Member Login
+- On Demand Classes
+- Live Classes
+- Leaderboard
+- Social
+- Activation
+versioning: null
+deprecation: null
+sla: null
+notes: Tonal publishes no developer API, so no versioning or deprecation policy exists.
+  The status page covers the consumer platform services (verified operational 2026-07-21,
+  clean incident history for the prior weeks).

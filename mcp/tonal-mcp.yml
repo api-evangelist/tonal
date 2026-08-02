@@ -1,0 +1,36 @@
+generated: '2026-07-21'
+method: searched
+status: published
+source: https://tonal.com/llms.txt
+server:
+  name: tonal-storefront-ucp
+  transport: http
+  url: https://tonal.com/api/ucp/mcp
+  protocol: Universal Commerce Protocol (UCP) shopping service over MCP (Shopify storefront)
+  discovery: https://tonal.com/.well-known/ucp
+  schema: https://ucp.dev/2026-04-08/services/shopping/mcp.openrpc.json
+  versions:
+  - '2026-04-08'
+  - '2026-01-23'
+  auth: Requires a registered agent profile; unauthenticated tools/list probe returned
+    HTTP 422 (error invalid_profile_url, "Unable to fetch agent profile") on 2026-07-21.
+  rate_limits: Rate-limited per IP; back off on 429 (per /llms.txt).
+tools:
+- name: search_catalog
+  description: Find products in the Tonal storefront catalog matching the buyer's intent
+  source_operation: https://tonal.com/llms.txt (UCP shopping service)
+- name: create_cart
+  description: Create a cart and add desired items
+  source_operation: https://tonal.com/llms.txt (UCP shopping service)
+- name: create_checkout
+  description: Start the purchase flow
+  source_operation: https://tonal.com/llms.txt (UCP shopping service)
+- name: update_checkout
+  description: Set shipping address and method
+  source_operation: https://tonal.com/llms.txt (UCP shopping service)
+- name: complete_checkout
+  description: Finalize the purchase (buyer must approve payment)
+  source_operation: https://tonal.com/llms.txt (UCP shopping service)
+notes: This is the Shopify-storefront agent-commerce surface published on tonal.com, not a
+  Tonal-built developer API. Tonal publishes no first-party developer/API program; the
+  strength-training hardware and mobile app expose no public API.

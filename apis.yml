@@ -1,9 +1,27 @@
 aid: tonal
 name: Tonal
-description: 'Tonal is a company surfaced as a portfolio company of kindred-ventures, sapphire-ventures,
-  shasta-ventures and added to the API Evangelist network as a stub for enrichment. Sector: health-wellness.
-  This profile is a lead awaiting the enrichment pipeline.'
+description: 'Tonal is a connected fitness company founded in 2013 by Aly Orady and
+  headquartered in San Francisco, best known for its wall-mounted smart home gym that
+  uses digital weight (electromagnetic resistance) and AI-powered coaching to deliver
+  personalized strength training. The Tonal 2 hardware pairs with a subscription
+  membership offering adaptive weight adjustment, science-backed workout programs,
+  live and on-demand classes, and progress tracking. Tonal publishes no first-party
+  developer API, but its Shopify-hosted storefront exposes an agent-commerce surface:
+  an llms.txt, a Universal Commerce Protocol (UCP) merchant profile at /.well-known/ucp,
+  and an MCP endpoint for agent-driven shopping.'
 url: https://raw.githubusercontent.com/api-evangelist/tonal/refs/heads/main/apis.yml
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/tonal.png
 x-type: company
 x-source: vc-portfolio
 x-backed-by:
@@ -13,11 +31,22 @@ x-backed-by:
 x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
+x-enrichment:
+  date: '2026-07-21'
+  status: enriched
+  artifacts_added: 9
+  pass: local-v1
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-21'
 tags:
 - Company
 - Health Wellness
+- Fitness
+- Strength Training
+- Connected Fitness
+- Home Gym
+- Coaching
+- Wellness
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -27,3 +56,35 @@ maintainers:
 common:
 - type: Website
   url: https://tonal.com/
+- type: Blog
+  url: https://tonal.com/blogs/all
+- type: Support
+  url: https://knowledge.tonal.com/s/
+- type: GitHubOrganization
+  url: https://github.com/TonalFitness
+- type: StatusPage
+  url: https://status.tonal.com
+- type: TermsOfService
+  url: https://tonal.com/pages/tonal-legal-terms
+- type: PrivacyPolicy
+  url: https://tonal.com/pages/tonal-privacy-policies
+- type: Pricing
+  url: https://tonal.com/pages/membership
+- type: Login
+  url: https://tonal.com/account
+- type: Careers
+  url: https://tonal.com/pages/careers
+- type: Contact
+  url: https://tonal.com/pages/contact
+- type: MCPServer
+  url: mcp/tonal-mcp.yml
+- type: LLMsTxt
+  url: llms/tonal-llms.txt
+- type: WellKnown
+  url: well-known/tonal-well-known.yml
+- type: Conformance
+  url: conformance/tonal-conformance.yml
+- type: Lifecycle
+  url: lifecycle/tonal-lifecycle.yml
+- type: DomainSecurity
+  url: security/tonal-domain-security.yml
