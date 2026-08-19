@@ -12,8 +12,8 @@ server:
   versions:
   - '2026-04-08'
   - '2026-01-23'
-  auth: Requires a registered agent profile; unauthenticated tools/list probe returned
-    HTTP 422 (error invalid_profile_url, "Unable to fetch agent profile") on 2026-07-21.
+  auth: Requires a registered agent profile; unauthenticated tools/list probe returned HTTP 422 (error
+    invalid_profile_url, "Unable to fetch agent profile") on 2026-07-21.
   rate_limits: Rate-limited per IP; back off on 429 (per /llms.txt).
 tools:
 - name: search_catalog
@@ -31,6 +31,14 @@ tools:
 - name: complete_checkout
   description: Finalize the purchase (buyer must approve payment)
   source_operation: https://tonal.com/llms.txt (UCP shopping service)
-notes: This is the Shopify-storefront agent-commerce surface published on tonal.com, not a
-  Tonal-built developer API. Tonal publishes no first-party developer/API program; the
-  strength-training hardware and mobile app expose no public API.
+notes: This is the Shopify-storefront agent-commerce surface published on tonal.com, not a Tonal-built
+  developer API. Tonal publishes no first-party developer/API program; the strength-training hardware
+  and mobile app expose no public API.
+deployment:
+  mode: remote
+  endpoint: https://tonal.com/api/ucp/mcp
+  verified: probed
+  probe: live
+  tools: 13
+  checked: '2026-08-12'
+  source: catalog MCP census
