@@ -10,6 +10,17 @@ description: 'Tonal is a connected fitness company founded in 2013 by Aly Orady 
   an llms.txt, a Universal Commerce Protocol (UCP) merchant profile at /.well-known/ucp,
   and an MCP endpoint for agent-driven shopping.'
 url: https://raw.githubusercontent.com/api-evangelist/tonal/refs/heads/main/apis.yml
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: unknown
   onboarding: unknown
