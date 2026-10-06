@@ -48,7 +48,7 @@ x-enrichment:
   artifacts_added: 9
   pass: local-v1
 created: '2026-07-17'
-modified: '2026-07-21'
+modified: '2026-10-06'
 tags:
 - Company
 - Health Wellness
@@ -65,6 +65,8 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- url: https://tonal.com/blogs/all.atom
+  type: BlogRSS
 - type: Website
   url: https://tonal.com/
 - type: Blog
